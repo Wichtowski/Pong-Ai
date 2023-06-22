@@ -138,6 +138,7 @@ def neat_runner(cfg):
     with open("best.pickle", "wb") as f:
         pickle.dump(winn, f)
 
+
 def main():
     local_dir = os.path.dirname(__file__)
     config_path = os.path.join(local_dir, 'config.txt')
