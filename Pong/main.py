@@ -117,6 +117,7 @@ def eval_genomes(genomes, cfg):
         # zerowanie przystosowania aby uniknąć nierównych szans podczas
         genome1.fitness = 0
         # wybieranie podzbioru w populacji, aby każdy miał szanse zagrać z każdym
+        # Wyrażenie genomes[min(i + 1, len(genomes) - 1):] jest używane do wybrania podlisty genomów, zaczynając od indeksu min(i + 1, len(genomes) - 1) do końca listy genomów. 
         for genome_id2, genome2 in genomes[min(i + 1, len(genomes) - 1):]:
             # wartość_if_true IF warunek ELSE wartość_IF_FALSE
             genome2.fitness = 0 if genome2.fitness is None else genome2.fitness
