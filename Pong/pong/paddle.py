@@ -1,5 +1,5 @@
 import pygame
-
+from random import randint
 
 class Paddle:
     VEL = 4
@@ -11,8 +11,12 @@ class Paddle:
         self.y = self.original_y = y
 
     def draw(self, win):
+        r = randint(0, 255)
+        g = randint(0, 255)
+        b = randint(0, 255)
+                
         pygame.draw.rect(
-            win, (255, 255, 255), (self.x, self.y, self.WIDTH, self.HEIGHT))
+            win, (r, g, b), (self.x, self.y, self.WIDTH, self.HEIGHT))
 
     def move(self, up=True):
         if up:
