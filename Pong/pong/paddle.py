@@ -2,7 +2,7 @@ import pygame
 from random import randint
 
 class Paddle:
-    VEL = 4
+    VEL = 20
     WIDTH = 20
     HEIGHT = 100
 

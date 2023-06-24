@@ -94,12 +94,12 @@ def eval_genomes(genomes, cfg):
 
 def neat_runner(cfg):
     # checkpoint z którego chcemy startować (jeśli odkomentujemy trzeba zakomentować neat.Population)
-    population = neat.Checkpointer.restore_checkpoint('neat-checkpoint-37')
-    # population: Population = neat.Population(cfg)
+    # population = neat.Checkpointer.restore_checkpoint('neat-checkpoint-37')
+    population: Population = neat.Population(cfg)
     population.add_reporter(neat.StdOutReporter(True))  # reporting przez konsole
     population.add_reporter(neat.Checkpointer(1))
 
-    winn = population.run(eval_genomes, 37)
+    winn = population.run(eval_genomes, 40)
     with open("best.pickle", "wb") as f:
         pickle.dump(winn, f)
 
