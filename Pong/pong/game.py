@@ -102,7 +102,7 @@ class Game:
     def draw(self, draw_score=True, draw_hits=False):
         self.window.fill(self.BLACK)
 
-        self._draw_divider()
+        # self._draw_divider()
 
         if draw_score:
             self._draw_score()
